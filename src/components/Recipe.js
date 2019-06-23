@@ -15,7 +15,7 @@ export default class Recipe extends Component {
         return (
             <React.Fragment>
                 <div className="col-10 mx-auto col-md-6 col-lg-4 my-3">
-                <div className="card rounded">
+                <div className="card rounded cards">
                     <img src={image_url}
                     className="img-card-top rounded-top"
                     style={{height:"14rem"}}
@@ -27,21 +27,24 @@ export default class Recipe extends Component {
                     </div>
 
                     <div className="card-footer rounded-bottom">
-                        <button 
-                            type="button"
-                            className="btn btn-primary btndetails text-capitalize"
-                            onClick={() => handleDetails(0, recipe_id)}
-                        >
-                        Details
-                        </button>
-                        <a
-                        href={source_url}
-                        className="btn btn-success btnurl mx-2 text-capitalize"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                            Recipe URL
-                        </a>
+                        <div className="buttons d-flex justify-content-center">
+                            <button 
+                                type="button"
+                                className="btn btn-primary btndetails text-capitalize"
+                                onClick={() => handleDetails(0, recipe_id)}
+                            >
+                            Details
+                            </button>
+                            <a
+                            href={source_url}
+                            className="btn btn-success btnurl mx-2 text-capitalize ml-5"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                                Recipe
+                            </a>
+                        </div>
+                        
                     </div>
 
                 </div>

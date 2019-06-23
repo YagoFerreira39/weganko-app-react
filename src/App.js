@@ -4,6 +4,7 @@ import Recipe from './components/Recipe';
 import {recipes} from './tempList';
 import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
+import RecipeNotVegan from './components/RecipeNotVegan';
 
 export default class App extends Component {
 
@@ -20,7 +21,9 @@ export default class App extends Component {
 
   displayPage = index => {
     switch(index) {
-      default: 
+      default:
+      case 2:
+        return (<RecipeNotVegan />)
       case 1:
         return (<RecipeList 
           recipes={this.state.recipes} 
@@ -62,11 +65,15 @@ export default class App extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const {base_url, search, query} = this.state;
-    this.setState(() => {
-      return {url: `${base_url}${query}${search}`, search: ""};
-    }, () => {
-      this.getRecipes();
-    })
+
+    search === 'chicken' ? 
+      this.setState({pageIndex: 2})
+      :
+      this.setState(() => {
+        return {url: `${base_url}${query}${search}`, search: ""};
+      }, () => {
+        this.getRecipes();
+      })
   };
 
   handleTitle = (string) => {

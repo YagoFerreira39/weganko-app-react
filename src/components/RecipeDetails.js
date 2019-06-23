@@ -68,28 +68,29 @@ export default class RecipeDetails extends Component {
                 <div className="container">
                 <div className="row">
                     <div className="col-10 my-3 mx-auto col-md-6">
-                        <button 
-                            type="button"
-                            className="btn btn-warning mb-5 text-capitalize"
+                        <a  
+                            href="#" 
+                            className="weganko text-capitalize text-slanted text-search mb-5 display-4"
                             onClick={() => handleIndex(1)}
                         >
-                            Back to recipe 
-                        </button>
-                        <img src={image_url} alt="recipe" className="d-block w-100 rounded" />
+                            Weganko
+                        </a>
+                        
+                        <img src={image_url} alt="recipe" className="d-block w-100 rounded mt-5" />
                     </div>
 
                     <div className="col-10 my-3 mx-auto col-md-6">
                         <h6 className="text-uppercase">{title}</h6>
-                        <h6 className="text-warning text-capitalize text-slanted">provided by {publisher}</h6>
+                        <h6 className="text-danger text-capitalize text-slanted">provided by {publisher}</h6>
                         <a href={publisher_url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-primary btndetails mt-2 text-capitalize"
-                        >publisher webpage</a>
+                        >Publisher</a>
                         <a href={source_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-success btnurl mt-2 text-capitalize"
+                        className="btn btn-success btnsrc mt-2 ml-3 text-capitalize"
                         >source_url</a>
                         <ul className="list-group t-4">
                             <h2 className=" mt-3 mb-4">Ingredients</h2>

@@ -1,6 +1,11 @@
 body {
   font-family: "Open Sans", sans-serif !important;
-  background: #FEE2C3;
+  background: #7fc04e; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #7fc04e 26%, #61c419 95%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #7fc04e 26%,#61c419 95%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #7fc04e 26%,#61c419 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#61c419',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 .text-slanted {
@@ -15,10 +20,15 @@ body {
   background: #FF5D10 !important;
   border: none;
 }
+.btnsrc {
+  background: #146643 !important;
+  border: none;
+}
 
 .btn:hover {
-  transition: all .6s linear;
+  transition: all .4s linear;
   opacity: .8; 
+  border-radius: 100%;
   color: #2D3440;
 }
 
@@ -29,4 +39,21 @@ body {
 .recipe-list,
 .text-search {
   color: #F27B3B;
+}
+
+.weganko {
+  color: #EC5D10
+}
+
+a.weganko, a.weganko:hover {
+  text-decoration: none;
+  color: #EC5D10;
+}
+
+.cards {
+  border-color: rgb(252, 175, 133);
+}
+
+.search-icon {
+  background: #F27B3B;
 }
